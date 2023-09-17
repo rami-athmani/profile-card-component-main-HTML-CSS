@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.main-section {
+    height: 100vh;
+    position: relative;
+    background-color: hsl(185, 75%, 39%);
+    overflow: hidden; 
+}    
+.top-back img{
+    position: absolute;
+    top: -80%;
+    left: -20%;
+}
+.bot-back img{
+    position: absolute;
+    bottom: -100%;
+    right: -22%;
+}
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 360px;
+    width: 335px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* card top part */
+.top-part {
+    height: 38.5%; 
+    background-image: url(../images/bg-pattern-card.svg);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative; 
+}
+.top-part img {
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+    top:calc(100% - 55px);
+    left: 50%;
+    transform: translate(calc(-50%));
+}
+/* card bottom part */
+.bottom-part {  
+    height: 61.5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.bottom-part > p:first-child {
+    color:hsl(229, 23%, 23%);
+    margin-top: 70px;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+.bottom-part span {
+    color: hsl(0, 0%, 59%);
+    font-weight: 400;
+}
+.bottom-part > p:nth-of-type(2) {
+    color: hsl(0, 0%, 59%);
+    margin:5px 0; 
+    font-size: 14px;
+}
+.bottom-part > hr {
+    width: 100%; 
+    border-top: 1px solid hsla(0, 0%, 59%, 0.1);
+    margin: 30px 0 -5px;
+}
+.bottom-part .socials {
+    display: grid;
+    grid-template-columns: repeat(3,50px);
+    gap:60px;
+}
+.bottom-part .socials .social {
+    text-align: center;
+    margin-top:5px;
+}
+.bottom-part .socials .social p:first-child {
+    font-size: 18px;
+    font-weight: 700;
+    color:hsl(229, 23%, 23%);
+    margin-bottom: 3px;
+}
+.bottom-part .socials .social p:nth-child(2) {
+    font-size: 12px;
+    color: hsl(0, 0%, 59%);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 375px) {
+    .top-back img,
+    .bot-back img {
+        display:none; 
+    }
+}
